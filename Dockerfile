@@ -9,10 +9,10 @@ RUN echo "ServerName localhost" >> /etc/httpd/conf/httpd.conf
 WORKDIR /tmp
 
 # Download and extract the template from GitHub
-RUN wget https://github.com/kimkyeongkil/templatemo_591_villa_agency/archive/refs/heads/main.zip && \
-    unzip main.zip && \
-    cp -r templatemo_591_villa_agency-main/* /var/www/html/ && \
-    rm -rf main.zip templatemo_591_villa_agency-main
+RUN wget https://github.com/StartBootstrap/startbootstrap-freelancer/archive/refs/heads/master.zip -O site.zip && \
+    unzip site.zip && \
+    cp -r startbootstrap-freelancer-master/* /var/www/html/ && \
+    rm -rf site.zip startbootstrap-freelancer-master
 
 # Expose port 80
 EXPOSE 80
