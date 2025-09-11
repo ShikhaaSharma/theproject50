@@ -12,7 +12,7 @@ WORKDIR /tmp
 RUN wget https://github.com/kimkyeongkil/templatemo_591_villa_agency/archive/refs/heads/main.zip && \
     unzip main.zip && \
     cp -r templatemo_591_villa_agency-main/* /var/www/html/ && \
-    rm -rf main.zip templatemo_591_villa_agency-main
+    
 
 # Expose port 80
 EXPOSE 80
